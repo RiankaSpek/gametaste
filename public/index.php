@@ -5,7 +5,7 @@ use Twig\Loader\FilesystemLoader;
 use RedBeanPHP\R as R;
 
 require_once '../vendor/autoload.php';
-R::setup('mysql:host=localhost;dbname=UR_DB_NAME', 'root', '');
+R::setup('mysql:host=localhost;dbname=YOUR_DATABASE_NAME', 'root', '');
 
 $loader = new FilesystemLoader('../views');
 $twig = new Environment($loader);

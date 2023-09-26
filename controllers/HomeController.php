@@ -6,7 +6,7 @@ class HomeController extends BaseController
 {
     public function index()
     {
-        $igdb = new IGDB("UR_API_KEY", "UR_API_KEY");
+        $igdb = new IGDB($this->client_ID, $this->access_token);
 
         $builder = new IGDBQueryBuilder();
         $result = $igdb->game(
@@ -133,7 +133,7 @@ class HomeController extends BaseController
 
     public function games()
     {
-        $igdb = new IGDB("k0c3065725802ija8esaw24v3tlh8h", "fta0z7aobuzq6n6eeobii4ilrn6iru");
+        $igdb = new IGDB($this->client_ID, $this->access_token);
 
         $builder = new IGDBQueryBuilder();
         $result = $igdb->game(
@@ -169,7 +169,7 @@ class HomeController extends BaseController
 
     public function gameSearch()
     {
-        $igdb = new IGDB("k0c3065725802ija8esaw24v3tlh8h", "fta0z7aobuzq6n6eeobii4ilrn6iru");
+        $igdb = new IGDB($this->client_ID, $this->access_token);
 
         $builder = new IGDBQueryBuilder();
         $result = $igdb->game(

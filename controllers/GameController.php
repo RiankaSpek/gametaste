@@ -13,7 +13,7 @@ class GameController extends BaseController
             die();
         }
 
-        $igdb = new IGDB("UR_API_KEY", "UR_API_KEY");
+        $igdb = new IGDB($this->client_ID, $this->access_token);
         $builder = new IGDBQueryBuilder();
         $result = $igdb->game(
             $builder
