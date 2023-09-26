@@ -34,19 +34,14 @@ Another great feature of GameTaste is the ability to review any game. Whether it
     git clone git@github.com:rico-vz/gametaste.git
     ```
 
-2. Navigate into the directory:
-    ```bash 
-    cd gametaste-main
-    ```
-
-3. Update/Install all Composer dependencies:
+2. Update/Install all Composer dependencies:
     ```bash 
     composer update
     ```
 
-4. Configure your Nginx or Apache to serve from ./public.
+3. Configure your Nginx or Apache to serve from ./public.
 
-5. In the case of using Nginx, apply the following rewrite rule:
+4. In the case of using Nginx, apply the following rewrite rule:
     ```conf
     location / {
       if (!-e $request_filename){
@@ -55,14 +50,14 @@ Another great feature of GameTaste is the ability to review any game. Whether it
     }
     ```
 
-6. Go to the BaseController and change the following to your own credentials:
+5. Go to the BaseController and change the following to your own credentials:
     ```
     $this->client_ID = "YOUR_CLIENT_ID";
     $this->access_token = "YOUR_ACCESS_TOKEN";
     ```
 
 
-7. Go to index.php and change the database credentials to yours.
+6. Go to index.php and change the database credentials to yours.
 
 ## Screenshots
 
